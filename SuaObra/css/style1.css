@@ -101,7 +101,12 @@ font-size: var(--text-size-700);
 
 .title{
     margin-top: var(--gap-xs);
-    z-index: 2;
+    z-index: 2;    
+}
+
+
+.titleBanner{
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
 .new_title{
@@ -625,11 +630,13 @@ section#cta{
     background-size: cover;
     background-position: bottom left;
     background-repeat: no-repeat;
+    background-color: black !important;;
+    
 }
 
 
 .nav_bar{
-    height: var(--gap-xxl);
+    /* height: var(--gap-xxl); */
     align-items: center;
     background-color: #f7a30a
 }
@@ -803,7 +810,7 @@ section#cta{
 /*------------Sections*/
 
 section{
-    padding: var(--gap-l) 0;
+    padding: var(--gap-l) 0 ;
     justify-content: center;
     align-items: center;
     overflow: hidden;
