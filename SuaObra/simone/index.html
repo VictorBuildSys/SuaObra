@@ -5,8 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+    <title>Simone Calisto</title>
+    
+    <link rel="icon" href="https://legalizacaodeobras.com.br/img/favicon.ico" type="image/svg+xml" sizes="any">
+    <!--Tags para SEO-->
+    <meta name="title" content="Transformando ideias em conexões digitais que brilham!">
+    <meta name="description" content="Sou especialista em mídias sociais, criando conteúdo envolvente e impactante para marcas.!">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Nath Antequera">
+    <meta name="keywords" content="mídias sociais, designer, Marketing digital">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Simone Calisto Social Midia">
+    <meta property="og:description" content="Sou especialista em mídias sociais, criando conteúdo envolvente e impactante para marcas!">
+    <meta property="og:url" content="https://legalizacaodeobras.com.br/simone/index.html">
+    <meta property="og:image" content="https://legalizacaodeobras.com.br/img/SC.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="LP Assessoria Imobiliária">
+
     <link rel="stylesheet" href="style.css">
-    <title>Personal Portfolio #04 | AsmrProg</title>
+    <link rel="stylesheet" href="Crosel.css">
 </head>
 
 <body>
@@ -21,18 +40,81 @@
         <button class="hire-btn">Sobre</button>
     </div>
 
+    <section class="banner">
+        <div>
+            <h1>Ola, Eu sou <span>Simone Calisto</span> 👋</h1>           
+            
+        </div>
+    </section>
+
     <div class="main">
-        <h4>Ola, Eu sou <span>Simone Calisto</span> 👋</h4>
+        <!-- <h4>Ola, Eu sou <span>Simone Calisto</span> 👋</h4> -->
         <p class="title">Social Midia</p>
         <p class="subtitle">Transformando ideias em conexões digitais que brilham!</p>        
         <p class="subtitle">Sou especialista em mídias sociais, criando conteúdo envolvente e impactante para marcas.!</p>
-        <!-- <div class="main3">
-            <img src="../img/sm1.avif">
-            <img src="../img/sm2.avif">
-            <img src="../img/sm3.avif">
-            <img src="../img/sm4.avif">           
-        </div> -->
+        
     </div>
+
+    <section class="Scrool">
+        <div class="card-carousel">
+            <div class="my-card"><img src="../simone//Img/img-1.JPG" ></div>
+            <div class="my-card"><img src="../simone//Img/img-2.JPG" ></div>
+            <div class="my-card"><img src="../simone//Img/img-3.JPG" ></div>
+            <div class="my-card"><img src="../simone//Img/img-4.JPG" ></div>
+            <div class="my-card"><img src="../simone//Img/img-5.JPG" ></div>
+            <div class="my-card"><img src="../simone//Img/img-6.JPG" ></div>
+          </div>
+    </section>
+      
+      <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script> 
+      <script>
+      $num = $('.my-card').length;
+      $even = $num / 2;
+      $odd = ($num + 1) / 2;
+      
+      if ($num % 2 == 0) {
+        $('.my-card:nth-child(' + $even + ')').addClass('active');
+        $('.my-card:nth-child(' + $even + ')').prev().addClass('prev');
+        $('.my-card:nth-child(' + $even + ')').next().addClass('next');
+      } else {
+        $('.my-card:nth-child(' + $odd + ')').addClass('active');
+        $('.my-card:nth-child(' + $odd + ')').prev().addClass('prev');
+        $('.my-card:nth-child(' + $odd + ')').next().addClass('next');
+      }
+      
+      $('.my-card').click(function() {
+        $slide = $('.active').width();
+        console.log($('.active').position().left);
+        
+        if ($(this).hasClass('next')) {
+          $('.card-carousel').stop(false, true).animate({left: '-=' + $slide});
+        } else if ($(this).hasClass('prev')) {
+          $('.card-carousel').stop(false, true).animate({left: '+=' + $slide});
+        }
+        
+        $(this).removeClass('prev next');
+        $(this).siblings().removeClass('prev active next');
+        
+        $(this).addClass('active');
+        $(this).prev().addClass('prev');
+        $(this).next().addClass('next');
+      });
+      
+      
+      // Keyboard nav
+      $('html body').keydown(function(e) {
+        if (e.keyCode == 37) { // left
+          $('.active').prev().trigger('click');
+        }
+        else if (e.keyCode == 39) { // right
+          $('.active').next().trigger('click');
+        }
+      });
+      </script>
+      
+      
+      
+    
     
 
     <div class="guarantee">
