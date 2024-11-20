@@ -79,6 +79,13 @@ body{
     border-radius: 6px;
     transition: background-color 0.3s ease;
 }
+.hire-btn a{
+    text-decoration: none !important;
+    
+    text-decoration: none;
+    color: #fff;
+}
+
 
 .hire-btn:hover{
     background: #fb8c00;
@@ -123,7 +130,7 @@ body{
 }
 
 .guarantee{
-    margin-top: 50px;
+    margin-top: 350px;
     padding: 0 50px;
     display: flex;
     flex-wrap: nowrap;
@@ -355,6 +362,7 @@ footer .cols .links-col a{
     font-size: 14px;
     line-height: 26px;
     transition: color 0.3s ease;
+    text-decoration: none !important;
 }
 
 footer .cols .links-col a:hover{
@@ -409,6 +417,22 @@ footer .cols .news-col form button:hover{
 footer .cols .news-col form button i{
     font-size: 26px;
 }
+
+footer path{
+    fill: #f7f7f7;
+}
+
+.footerspan{
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+
+.currentColor{
+    fill: #f7f7f7;
+}
+
 
 @media (max-width: 768px) {
     .banner h1 {
@@ -471,6 +495,11 @@ footer .cols .news-col form button i{
 
     footer .cols .news-col{
         flex-basis: 50%;
+    }
+    .tel{
+        color: #7b7b7b;
+        text-decoration: none;
+        
     }
 
 }
@@ -576,8 +605,13 @@ footer .cols .news-col form button i{
     footer .cols .news-col{
         flex-basis: 100%;
     }
+        
+    footer path{
+        fill: #f7f7f7;
+    }
 
 }
+
 
 @media screen and (max-width: 480px) {
     
