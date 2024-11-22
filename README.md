@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+
 # app
 
 ## IDE recomendada
@@ -35,9 +36,9 @@ Fork Git Vercel
 https://github.com/biulddll/json-server-vercel
 
 ```
+
 =======
 https://app.netlify.com
-
 
 https://suaobra.netlify.app
 https://legalizacaodeobras.com.br
@@ -55,8 +56,8 @@ legalizacaodeobras.com.br
 buildsysdev@gmail.com
 https://builder.hostinger.com/Yg2WvnD4alU1M2bZ
 
-31 9 9607-1087
-----------------
+## 31 9 9607-1087
+
 Top
 https://accountaxcont.com.br/
 https://accountaxcont.com.br/reducao-de-inss-de-obra
@@ -67,5 +68,13 @@ https://assessoriafm.com.br/
 
 <p>A <strong>Sua Obra Regular</strong> é especializada na <strong>regularização de INSS de obra</strong>, oferecendo soluções precisas e seguras para que você cumpra todas as normas legais com tranquilidade. Nossa equipe cuida de cada detalhe do processo, garantindo que a documentação esteja sempre em conformidade com a legislação vigente.</p>
 
+```
 
->>>>>>> 486ef3402106df47651c98c207d801e1e0c418be
+firebase Hosting
+npm install -g firebase-tools
+firebase init
+firebase deploy
+https://suaobra-69ecf.web.app/
+
+https://suaobra-69ecf.web.app/https://suaobra-69ecf.web.app/
+```
