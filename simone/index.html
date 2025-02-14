@@ -25,7 +25,44 @@
     <meta property="og:site_name" content="LP Assessoria Imobiliária">
 
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="Crosel.css">
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- Demo styles -->
+  <style>
+   
+    .swiper {
+      width: 100%;
+      padding-top: 10px;
+      padding-bottom: 20px;
+    }
+    .swiper-pagination {      
+        padding-top: 10px;
+        padding-bottom: 20px;      
+    }
+
+    .swiper-slide {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 18px;
+
+      background-position: center;
+      background-size: cover;
+      width: 350px;
+       
+      padding-top: 10px;
+        padding-bottom: 20px;
+      
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+    }
+  </style>
 </head>
 
 <body>
@@ -43,79 +80,42 @@
 
     <section class="banner">
         <div>
-            <h1>Ola, Eu sou <span>Simone Calisto</span> 👋</h1>           
-            
+            <h1>Ola, Eu sou <span>Simone Calisto</span> 👋</h1> 
+        </div>
+    </section>
+    
+
+    <section  class="apresentar"  >        
+        <div class="info">
+            <h3>Social Midia</h3>
+                <p class="subtitle" style="margin-bottom: 20px;" >Transformando ideias em conexões digitais que brilham!</p>        
+                <p class="subtitle" style="margin-bottom: 20px;" >Sou especialista em mídias sociais, criando conteúdo envolvente e impactante para marcas.!</p> 
         </div>
     </section>
 
-    <div id="Portifolio" class="main">
-        <!-- <h4>Ola, Eu sou <span>Simone Calisto</span> 👋</h4> -->
-        <p class="title">Social Midia</p>
-        <p class="subtitle">Transformando ideias em conexões digitais que brilham!</p>        
-        <p class="subtitle">Sou especialista em mídias sociais, criando conteúdo envolvente e impactante para marcas.!</p>
-        
-    </div>
-
-    <section class="carousel">
-        <div class="card-carousel">
-            <div class="my-card"><img src="../simone/Img/img1.jpg" ></div>
-            <div class="my-card"><img src="../simone/Img/img2.jpg" ></div>
-            <div class="my-card"><img src="../simone/Img/img3.jpg" ></div>
-            <!-- <div class="my-card"><img src="../simone//Img/img-4.JPG" ></div>
-            <div class="my-card"><img src="../simone//Img/img-5.JPG" ></div>
-            <div class="my-card"><img src="../simone//Img/img-6.JPG" ></div> -->
+    <section class="swiper mySwiper">
+        <div class="swiper-wrapper">
+         
+          <div class="swiper-slide">
+            <img src="../simone/Img/img2.jpg" />
           </div>
-    </section>
-      
-      <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script> 
-      <script>
-      $num = $('.my-card').length;
-      $even = $num / 2;
-      $odd = ($num + 1) / 2;
-      
-      if ($num % 2 == 0) {
-        $('.my-card:nth-child(' + $even + ')').addClass('active');
-        $('.my-card:nth-child(' + $even + ')').prev().addClass('prev');
-        $('.my-card:nth-child(' + $even + ')').next().addClass('next');
-      } else {
-        $('.my-card:nth-child(' + $odd + ')').addClass('active');
-        $('.my-card:nth-child(' + $odd + ')').prev().addClass('prev');
-        $('.my-card:nth-child(' + $odd + ')').next().addClass('next');
-      }
-      
-      $('.my-card').click(function() {
-        $slide = $('.active').width();
-        console.log($('.active').position().left);
-        
-        if ($(this).hasClass('next')) {
-          $('.card-carousel').stop(false, true).animate({left: '-=' + $slide});
-        } else if ($(this).hasClass('prev')) {
-          $('.card-carousel').stop(false, true).animate({left: '+=' + $slide});
-        }
-        
-        $(this).removeClass('prev next');
-        $(this).siblings().removeClass('prev active next');
-        
-        $(this).addClass('active');
-        $(this).prev().addClass('prev');
-        $(this).next().addClass('next');
-      });
-      
-      
-      // Keyboard nav
-      $('html body').keydown(function(e) {
-        if (e.keyCode == 37) { // left
-          $('.active').prev().trigger('click');
-        }
-        else if (e.keyCode == 39) { // right
-          $('.active').next().trigger('click');
-        }
-      });
-      </script>
-      
-      
-      
-    
+          <div class="swiper-slide">
+            <img src="../simone/Img/img3.jpg" />
+          </div>    
+          <div class="swiper-slide">
+            <img src="../simone/Img/img4.jpg" />
+          </div>  
+             
+          <div class="swiper-slide">
+            <img src="../simone/Img/img6.jpg" />
+          </div>  
+          <div class="swiper-slide">
+            <img src="../simone/Img/img2.jpg" />
+          </div>
+               
+        </div>
+        <div class="swiper-pagination"></div>
+      </section>
     
 
     <div class="guarantee">
@@ -274,7 +274,31 @@
         </div>
 
     </footer>
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
+<!-- Initialize Swiper -->
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    effect: "coverflow",
+    // effect: "cards",
+    //https://swiperjs.com/demos
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: "auto",
+    initialSlide: 2,
+    coverflowEffect: {
+      rotate: 50,
+      stretch: 0,
+      depth: 100,
+      modifier: 1,
+      slideShadows: true,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+    },
+  });
+</script>
 </body>
 
 </html>
