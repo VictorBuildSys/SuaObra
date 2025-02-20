@@ -9,12 +9,17 @@ app.use(express.static(path.join(__dirname)));
 
 
 
-router.get('/', function (req, res) {
+router.get('/obra/', function (req, res) {
     res.sendFile(path.join(__dirname,  'index.html'));
 })
 
 router.get('/simone', function (req, res) {
     res.sendFile(path.join(__dirname,  'simone/index.html'));
+})
+
+
+router.get('/advance', function (req, res) {
+    res.sendFile(path.join(__dirname,  'advance/index.html'));
 })
 
 
@@ -48,7 +53,7 @@ app.get('/template', (req, res) => {
 });
 
 // Configurando o servidor para escutar na porta 3000
-const port = 3000;
+const port = 3001;
 app.listen(port, () => {
     console.log(`Servidor está rodando em http://localhost:${port}`);
 });
