@@ -22,6 +22,9 @@ router.get('/advance', function (req, res) {
     res.sendFile(path.join(__dirname,  'advance/index.html'));
 })
 
+router.get('/bhcamcaba', function (req, res) {
+    res.sendFile(path.join(__dirname,  'bhcacamba/index.html'));
+})
 
 app.get('/victor', (req, res) => {    
     res.sendFile(path.join(__dirname,  'victor/index.html'));
