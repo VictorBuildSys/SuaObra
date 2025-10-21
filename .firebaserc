@@ -1,5 +1,15 @@
 {
   "projects": {
     "default": "suaobra-69ecf"
-  }
+  },
+  "targets": {
+    "suaobra-69ecf": {
+      "hosting": {
+        "SuaObra": [
+          "suaobra-69ecf"
+        ]
+      }
+    }
+  },
+  "etags": {}
 }
